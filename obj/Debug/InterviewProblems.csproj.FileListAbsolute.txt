@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2015\Projects\InterviewProblems\InterviewProblems\bin\Debug\InterviewProblems.exe.config
+c:\users\user\documents\visual studio 2015\Projects\InterviewProblems\InterviewProblems\bin\Debug\InterviewProblems.exe
+c:\users\user\documents\visual studio 2015\Projects\InterviewProblems\InterviewProblems\bin\Debug\InterviewProblems.pdb
+c:\users\user\documents\visual studio 2015\Projects\InterviewProblems\InterviewProblems\obj\Debug\InterviewProblems.exe
+c:\users\user\documents\visual studio 2015\Projects\InterviewProblems\InterviewProblems\obj\Debug\InterviewProblems.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\InterviewProblems\InterviewProblems\obj\Debug\InterviewProblems.csprojResolveAssemblyReference.cache
