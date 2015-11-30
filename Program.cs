@@ -19,6 +19,9 @@ namespace InterviewProblems
             //        Console.WriteLine(item);
             //}
 
+            ReverseInt.Reverse(123);
+            FibonacciSequence.Fibonacci(5);
+
             string s = "the man the plan the canal Panama";
             Regex reg = new Regex(@"\bthe\W+(?:\w+\W+){0,4}canal\b");
             Console.WriteLine((reg.Matches(s).Count)); // Wrong
@@ -140,7 +143,7 @@ namespace InterviewProblems
     {
         public static string Reverse(string str)
         {
-            var charArray = str.ToCharArray();
+            char[] charArray = str.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }
@@ -152,7 +155,7 @@ namespace InterviewProblems
         {
             if (str.Length > 0)
             {
-                var ch = str[0];
+                char ch = str[0];
                 // prints the last n-1 charactors in reverse order
                 Reverse(str.Substring(1));
                 Console.Write(ch); // prints that last char
@@ -255,9 +258,9 @@ namespace InterviewProblems
         }
     }
 
-    public class FibonacciSequence
+    public static class FibonacciSequence
     {
-        public void Fibonacci_(int len)
+        public static void Fibonacci(int len)
         {
             int a = 0, b = 1, c = 0;
             Console.Write("{0} {1}", a, b);
