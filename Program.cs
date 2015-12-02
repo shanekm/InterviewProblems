@@ -19,8 +19,32 @@ namespace InterviewProblems
             //        Console.WriteLine(item);
             //}
 
+            var st = (1.00m/0.02m); // 50
+            var t1 = decimal.Round(1230.3092m*(1.00m/0.02m)); // 61515.46 => 61515 // Round in cent space to an integer
+            var t2 = (0.02m/1.00m); // 0.02
+            var t3 = t2*t1;         // 1230.30 // convert back to dollars
+
+
+            //var test = (0.02m/1.00m)*decimal.Round(1230.3092m*(1.00m/0.02m));
+
             ReverseInt.Reverse(123);
             FibonacciSequence.Fibonacci(5);
+
+            List<int> list = new List<int>
+            {
+                1,
+                2,
+                3,
+                1,
+                1,
+                6,
+                1,
+                3
+            };
+
+            //var r1 = ArrayStuff.RemoveItemsLinq(list);
+            //var r1 = ArrayStuff.RemoveItemsFor(list);
+            var r2 = ArrayStuff.RemoveReverseFor(list);
 
             string s = "the man the plan the canal Panama";
             Regex reg = new Regex(@"\bthe\W+(?:\w+\W+){0,4}canal\b");
@@ -122,6 +146,36 @@ namespace InterviewProblems
             }
 
             return true;
+        }
+    }
+
+    public static class ArrayStuff
+    {
+        // remove all 1s
+        public static List<int> RemoveItemsLinq(List<int> list)
+        {
+            list.RemoveAll(x => x == 1);
+            return list;
+        }
+
+        public static List<int> RemoveItemsFor(List<int> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == 1)
+                    list.RemoveAt(i); // Wrong
+            }
+            return list;
+        }
+
+        public static List<int> RemoveReverseFor(List<int> list)
+        {
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                if (list[i] == 1)
+                    list.RemoveAt(i);
+            }
+            return list;
         }
     }
 
